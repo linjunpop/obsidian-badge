@@ -1,21 +1,40 @@
-## Obsidian Sample Plugin
+## Obsidian Progress Plugin
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+![GitHub release badge](https://badgen.net/github/release/linjunpop/obsidian-progress)
 
-This project uses Typescript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in Typescript Definition format, which contains TSDoc comments describing what it does.
+This is a plugin to render a progress bar in Obsidian (https://obsidian.md).
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
+## Usage
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Changes the default font color to red using `styles.css`.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+The `progress` fenced code blocks will be rendered as a embed Progress bar.
 
-### First time developing plugins?
+```progress
+Reading - The Flat land: 11/23
+
+Exercise: 77/100
+```
+
+```progress
+My Yearly plan: 29/40
+```
+
+which will render
+
+<img width="649" alt="image" src="https://user-images.githubusercontent.com/214616/153146756-c0c49b1f-a17d-4658-8edd-bbc962d8fc5f.png">
+
+## Installation
+
+### Installing from the Obsidian App
+
+Search "Progress" in Settings -> Community plugins, you can find and install this plugin.
+
+You can check https://help.obsidian.md/Advanced+topics/Third-party+plugins#Discover+and+install+community+plugins for an official guide.
+
+### Manually installing the plugin
+
+Find the latest release: https://github.com/linjunpop/obsidian-progress/releases, then copy over `main.js`, `manifest.json` to your vault's `.obsidian/plugins/obsidian-progress` directory (ex. `VaultFolder/.obsidian/plugins/obsidian-progress/`).
+
+## Development
 
 Quick starting guide for new plugin devs:
 
@@ -46,18 +65,13 @@ Quick starting guide for new plugin devs:
 - Make sure you have a `README.md` file in the root of your repo.
 - Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
 
-### How to use
-
-- Clone this repo.
-- `npm i` or `yarn` to install dependencies
-- `npm run dev` to start compilation in watch mode.
-
 ### Manually installing the plugin
 
 - Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
 
 ### Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
+
+- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code.
 - To use eslint with this project, make sure to install eslint from terminal:
   - `npm install -g eslint`
 - To use eslint to analyze this project use this command:
@@ -65,7 +79,6 @@ Quick starting guide for new plugin devs:
   - eslint will then create a report with suggestions for code improvement by file and line number.
 - If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
   - `eslint .\src\`
-
 
 ### API Documentation
 
