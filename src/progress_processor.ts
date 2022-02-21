@@ -7,11 +7,11 @@ class ProgressProcessor {
     this.progressBarRenderer = new ImageRenderer()
   }
 
-  processor = async (sourceString: string, el: HTMLElement) => {
+  processor = (sourceString: string, el: HTMLElement) => {
     const rows = sourceString.trim().split("\n")
 
     return Promise.all(
-      rows.map(async (row) => {
+      rows.map((row) => {
         return this._processProgressBar(el, row)
       })
     )
@@ -19,7 +19,7 @@ class ProgressProcessor {
 
   // private
 
-  private async _processProgressBar(el: HTMLElement, content: string) {
+  private _processProgressBar(el: HTMLElement, content: string) {
     const pattern = /((?<label>.+):\s*)*(?<remain>\d+)\/(?<total>\d+)/
 
     const matchResult = content.match(pattern)
@@ -30,7 +30,7 @@ class ProgressProcessor {
     }
   }
 
-  private async _insertProgressBar(el: HTMLElement, label: string, remain: number, total: number) {
+  private _insertProgressBar(el: HTMLElement, label: string, remain: number, total: number) {
     // container
     const container = document.createElement('div');
 
