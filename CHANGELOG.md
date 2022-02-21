@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.1.1
+
+- Sanitize the label before showing it
+- Make all functions regular ones
+
 ## v0.1.0
 
 Initial release
