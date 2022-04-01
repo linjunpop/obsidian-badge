@@ -1,4 +1,4 @@
-import sanitizeHtml from 'sanitize-html';
+import { escapeHTML } from "./utils"
 
 class ImageRenderer {
   renderSVG = (label: string, remain: number, total: number) => {
@@ -36,7 +36,7 @@ class ImageRenderer {
   }
 
   private _renderWithLabel = (label: string, remain: number, total: number) => {
-    const sanitizedLabel = sanitizeHtml(label)
+    const escapedLabel = escapeHTML(label)
 
     let labelWidth = label.length * 7
     if (labelWidth < 30) {
@@ -62,7 +62,7 @@ class ImageRenderer {
       
       <g fill="#fff" text-anchor="label" font-family="sans-serif" font-size="11">
         <text x="4" y="14" >
-          ${sanitizedLabel}
+          ${escapedLabel}
         </text>
       </g>
 
