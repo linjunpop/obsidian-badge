@@ -1,0 +1,50 @@
+.block-language-obsidian-badge {
+  /* background-color: rebeccapurple;
+  color: red; */
+  /* display: inline-block; */
+}
+
+.block-language-obsidian-badge .obsidian-badge_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-color: #f3f3f3;
+  border-radius: 3px;
+  margin-bottom: 0.3rem;
+}
+
+.block-language-obsidian-badge .obsidian-badge_text {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.block-language-obsidian-badge .obsidian-badge_value {
+  color: #2978ef;
+}
+
+.block-language-obsidian-badge .obsidian-badge_value>span {
+  color: #c1d7f9;
+}
+
+.block-language-obsidian-badge .obsidian-badge_label {
+  padding: 0.2rem;
+  flex: 1 0 auto;
+}
+
+.block-language-obsidian-badge .obsidian-badge_progress-bar {
+  width: 100%;
+  background-color: #c1d7f9;
+
+  flex: 1 1 auto;
+}
+
+.block-language-obsidian-badge .obsidian-badge_progress-bar-fill {
+  display: block;
+  height: 22px;
+  background-color: #2978ef;
+  border-radius: 0 0 3px 3px;
+
+  transition: width 500ms ease-in-out;
+}

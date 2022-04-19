@@ -1,6 +1,6 @@
 import { ImageRenderer } from "./image_renderer"
 
-class ProgressProcessor {
+class BadgeProcessor {
   progressBarRenderer: ImageRenderer
 
   constructor() {
@@ -44,4 +44,4 @@ class ProgressProcessor {
   }
 }
 
-export { ProgressProcessor }
+export { BadgeProcessor }
