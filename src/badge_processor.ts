@@ -1,10 +1,10 @@
-import { ImageRenderer } from "./image_renderer"
+import { BadgeRenderer } from "./badge_renderer"
 
 class BadgeProcessor {
-  progressBarRenderer: ImageRenderer
+  renderer: BadgeRenderer
 
   constructor() {
-    this.progressBarRenderer = new ImageRenderer()
+    this.renderer = new BadgeRenderer()
   }
 
   processor = (sourceString: string, el: HTMLElement) => {
@@ -12,32 +12,32 @@ class BadgeProcessor {
 
     return Promise.all(
       rows.map((row) => {
-        return this._processProgressBar(el, row)
+        return this._render(el, row)
       })
     )
   };
 
   // private
-
-  private _processProgressBar(el: HTMLElement, content: string) {
-    const pattern = /((?<label>.+):\s*)*(?<remain>\d+)\/(?<total>\d+)/
+  private _render(el: HTMLElement, content: string) {
+    const pattern = /(?<label>.+):\s*(?<value>(?<progressValue>(?<remain>\d+)\/(?<total>\d+))|(?<otherValue>\w+))/
 
     const matchResult = content.match(pattern)
 
-    if (matchResult) {
-      const groups = matchResult.groups
-      this._insertProgressBar(el, groups.label, +groups.remain, +groups.total)
-    }
-  }
-
-  private _insertProgressBar(el: HTMLElement, label: string, remain: number, total: number) {
     // container
     const container = document.createElement('div');
 
-    // img
-    const image = this.progressBarRenderer.renderSVG(label, remain, total)
-
-    container.innerHTML = image
+    if (matchResult) {
+      const groups = matchResult.groups
+      if (groups.progressValue !== undefined && groups.progressValue !== null && groups.progressValue !== "") {
+        container.innerHTML = this.renderer.renderBadgeWithProgress(groups.label, +groups.remain, +groups.total)
+      } else {
+        container.innerHTML = this.renderer.renderBadge(groups.label, groups.otherValue)
+      }
+    } else {
+      if (content !== "") {
+        container.innerHTML = this.renderer.renderError(`Invalid badge format: ${content}`)
+      }
+    }
 
     // insert container into the DOM
     el.appendChild(container)
