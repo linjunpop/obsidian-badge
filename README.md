@@ -20,7 +20,7 @@ My Yearly plan: 29/40
 
 which will render
 
-<img width="649" alt="image" src="https://user-images.githubusercontent.com/214616/153146756-c0c49b1f-a17d-4658-8edd-bbc962d8fc5f.png">
+<img width="781" alt="image" src="https://user-images.githubusercontent.com/214616/163982455-437ad940-013c-4252-a5b1-2b4376bfdfc2.png">
 
 ## Installation
 
