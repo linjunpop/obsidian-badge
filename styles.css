@@ -1,8 +1,4 @@
-.block-language-obsidian-badge {
-  /* background-color: rebeccapurple;
-  color: red; */
-  /* display: inline-block; */
-}
+.block-language-obsidian-badge {}
 
 .block-language-obsidian-badge .obsidian-badge_wrapper {
   display: flex;
