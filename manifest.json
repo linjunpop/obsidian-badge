@@ -1,10 +1,10 @@
 {
-  "id": "obsidian-progress",
-  "name": "Progress View",
+  "id": "obsidian-badge",
+  "name": "Obsidian Badge",
   "version": "0.1.1",
   "minAppVersion": "0.12.0",
-  "description": "This is a plugin to show progress bar for Obsidian.",
+  "description": "This is a plugin to show badge for Obsidian.",
   "author": "Jun Lin",
-  "authorUrl": "https://github.com/linjunpop/obsidian-progress",
+  "authorUrl": "https://github.com/linjunpop/obsidian-badge",
   "isDesktopOnly": false
 }

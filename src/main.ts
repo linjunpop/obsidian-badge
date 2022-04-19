@@ -1,13 +1,13 @@
 import { Plugin } from 'obsidian';
 
-import { ProgressProcessor } from './progress_processor';
+import { BadgeProcessor } from './badge_processor';
 
 export default class ProgressPlugin extends Plugin {
   onload() {
     // Load the processor
-    const progressProcessor = new ProgressProcessor()
+    const badgeProcessor = new BadgeProcessor()
 
     // Register the processor to Obsidian
-    this.registerMarkdownCodeBlockProcessor("progress", progressProcessor.processor)
+    this.registerMarkdownCodeBlockProcessor("obsidian-badge", badgeProcessor.processor)
   }
 }

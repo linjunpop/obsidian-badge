@@ -1,20 +1,20 @@
-## Obsidian Progress Plugin
+## Obsidian Badge Plugin
 
-![GitHub release badge](https://badgen.net/github/release/linjunpop/obsidian-progress)
+![GitHub release badge](https://badgen.net/github/release/linjunpop/obsidian-badge)
 
-This is a plugin to render a progress bar in Obsidian (https://obsidian.md).
+This is a plugin to render badges in Obsidian (https://obsidian.md).
 
 ## Usage
 
-The `progress` fenced code blocks will be rendered as a embed Progress bar.
+The `obsidian-badge` fenced code blocks will be rendered each line as a embed badge.
 
-```progress
+```obsidian-badge
 Reading - The Flat land: 11/23
 
 Exercise: 77/100
 ```
 
-```progress
+```obsidian-badge
 My Yearly plan: 29/40
 ```
 
@@ -26,13 +26,13 @@ which will render
 
 ### Installing from the Obsidian App
 
-Search "Progress" in Settings -> Community plugins, you can find and install this plugin.
+Search "Badge" in Settings -> Community plugins, you can find and install this plugin.
 
 You can check https://help.obsidian.md/Advanced+topics/Third-party+plugins#Discover+and+install+community+plugins for an official guide.
 
 ### Manually installing the plugin
 
-Find the latest release: https://github.com/linjunpop/obsidian-progress/releases, then copy over `main.js`, `manifest.json` to your vault's `.obsidian/plugins/obsidian-progress` directory (ex. `VaultFolder/.obsidian/plugins/obsidian-progress/`).
+Find the latest release: https://github.com/linjunpop/obsidian-badge/releases, then copy over `main.js`, `manifest.json` to your vault's `.obsidian/plugins/obsidian-badge` directory (ex. `VaultFolder/.obsidian/plugins/obsidian-badge/`).
 
 ## Development
 
