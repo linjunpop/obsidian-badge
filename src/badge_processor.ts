@@ -24,7 +24,8 @@ class BadgeProcessor {
     const matchResult = content.match(pattern)
 
     // container
-    const container = document.createElement('div');
+    const container = document.createElement('section');
+    container.addClass('obsidian-badge_wrapper')
 
     if (matchResult) {
       const groups = matchResult.groups

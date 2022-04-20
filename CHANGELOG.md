@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## master
+
+- Show badge as an inline item
+
 ## v0.2.0
 
 - Rename to `obsidian-badge`
