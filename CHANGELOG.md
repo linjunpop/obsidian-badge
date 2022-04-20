@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.2.0
+
+- Rename to `obsidian-badge`
+
 ## v0.1.1
 
 - Sanitize the label before showing it
