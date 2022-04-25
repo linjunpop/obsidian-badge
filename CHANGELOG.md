@@ -2,6 +2,8 @@
 
 ## master
 
+## v0.3.0
+
 - Show badge as an inline item
 
 ## v0.2.0
