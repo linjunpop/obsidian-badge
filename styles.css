@@ -5,6 +5,8 @@
 }
 
 .block-language-obsidian-badge .obsidian-badge_wrapper {
+  all: initial;
+
   display: inline-flex;
   flex-flow: column nowrap;
 
@@ -13,11 +15,16 @@
   margin: 0.2em;
 }
 
+.block-language-obsidian-badge .obsidian-badge_wrapper * {
+  all: unset;
+}
+
 .block-language-obsidian-badge .obsidian-badge_text {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-end;
   font-size: small;
+  padding: 0.3em 0;
 }
 
 .block-language-obsidian-badge .obsidian-badge_value {
