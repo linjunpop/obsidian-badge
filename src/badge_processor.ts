@@ -19,7 +19,7 @@ class BadgeProcessor {
 
   // private
   private _render(el: HTMLElement, content: string) {
-    const pattern = /(?<label>.+):\s*(?<value>(?<progressValue>(?<remain>\d+)\/(?<total>\d+))|(?<otherValue>\w+))/
+    const pattern = /(?<label>.+):\s*(?<value>(?<progressValue>(?<remain>\d+)\/(?<total>\d+))|(?<otherValue>.+))/
 
     const matchResult = content.match(pattern)
 

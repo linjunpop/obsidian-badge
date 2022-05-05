@@ -2,6 +2,8 @@
 
 ## master
 
+- Fixes if the right value contains non wording characters, it won't be recognized.
+
 ## v0.4.0
 
 - Fixes incorrect badge rendering in Live Preview.
