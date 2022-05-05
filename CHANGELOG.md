@@ -2,6 +2,8 @@
 
 ## master
 
+## v0.4.0
+
 - Fixes incorrect badge rendering in Live Preview.
 
 ## v0.3.0
