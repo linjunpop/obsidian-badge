@@ -2,6 +2,8 @@
 
 ## master
 
+## v0.4.1
+
 - Fixes if the right value contains non wording characters, it won't be recognized.
 
 ## v0.4.0
